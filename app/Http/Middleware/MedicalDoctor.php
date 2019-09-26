@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class Admin
+class MedicalDoctor
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class Admin
     public function handle($request, Closure $next)
     {
         $role = Auth::user()->role;
-        if ($role === 'admin') {
+        if ($role === 'medical_doctor') {
             return $next($request);
         }
 

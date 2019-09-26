@@ -28,8 +28,16 @@ class HomeController extends Controller
             return redirect('/admin');
         }
 
-        if (Auth::user()->role === 'user') {
-            return redirect('/user');
+        if (Auth::user()->role === 'dentist') {
+            return redirect('/dentist');
+        }
+
+        if (Auth::user()->role === 'staff_nurse') {
+            return redirect('/staff_nurse');
+        }
+
+        if (Auth::user()->role === 'medical_doctor') {
+            return redirect('/medical_doctor');
         }
     }
 }

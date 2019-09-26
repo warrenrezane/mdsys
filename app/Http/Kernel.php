@@ -57,8 +57,11 @@ class Kernel extends HttpKernel
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
+        'dentist' => \App\Http\Middleware\Dentist::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'medical_doctor' => \App\Http\Middleware\MedicalDoctor::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
+        'staff_nurse' => \App\Http\Middleware\StaffNurse::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];

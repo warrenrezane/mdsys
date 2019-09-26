@@ -80,7 +80,10 @@
 
                             <div class="col-md-6">
                                 <select class="form-control @error('role') is-invalid @enderror" name="role" id="role" required>
-                                    <option value="user" selected>Normal User</option>
+                                    <option value="" selected disabled>Please Select Role...</option>
+                                    <option value="dentist">Dentist</option>
+                                    <option value="staff_nurse">Staff Nurse</option>
+                                    <option value="medical_doctor">Medical Doctor</option>
                                     <option value="admin">Admin</option>
                                 </select>
 
@@ -97,6 +100,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <a href="{{ route('admin.index') }}" class="btn btn-default">
+                                    Cancel
+                                </a>
                             </div>
                         </div>
                     </form>

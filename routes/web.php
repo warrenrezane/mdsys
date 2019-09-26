@@ -17,10 +17,17 @@ Auth::routes([
     'verify' => false
 ]);
 
+// Main Redirect
 Route::get('/', 'HomeController@index')->name('home');
 
 // Admin Routes
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 
-// User Routes
-Route::get('/user', 'UserController@index')->name('user.index');
+// Dentist Routes
+Route::get('/dentist', 'DentistController@index')->name('dentist.index');
+
+// SN Routes (Staff Nurse)
+Route::get('/staff_nurse', 'SNController@index')->name('sn.index');
+
+// MD Routes (Medical Doctor)
+Route::get('/medical_doctor', 'MDController@index')->name('md.index');

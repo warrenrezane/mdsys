@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    This is the dashboard for user.
+                    This is the dashboard for Dentist(s).
                 </div>
             </div>
         </div>
